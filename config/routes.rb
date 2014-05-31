@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :projects
+
   root 'pages#home'
   devise_for :users
   resource :user, controller: 'current_user', only: :show

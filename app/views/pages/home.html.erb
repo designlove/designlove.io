@@ -1,2 +1,38 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="masthead clearfix" id="">
+  <h1>Every Project Could Use A Little Design Love</h1>
+  <p><%= link_to "Get Started", new_user_session_path, class: "btn btn-default" %></p>
+</div>
+
+<section id="about">
+  <div class= "section">
+    <h2>About DesignLove</h2>
+    <p>Cosby sweater aesthetic vegan drinking vinegar distillery umami kitsch, Austin Pinterest quinoa Thundercats gastropub. Ethical ethnic gluten-free, iPhone pop-up plaid 90's 8-bit literally fixie sriracha Schlitz seitan cornhole drinking vinegar. Squid bespoke Tumblr Carles, ugh scenester Neutra occupy sriracha single-origin coffee tote bag. Thundercats slow-carb Marfa fap selfies 90's bitters, roof party letterpress occupy +1 gastropub Carles butcher forage. Squid Banksy ethnic, stumptown VHS scenester tousled Tumblr kale chips Tonx. Mlkshk kogi distillery, seitan chambray vegan pug lomo drinking vinegar hella Schlitz put a bird on it. Meh Carles small batch, Wes Anderson Vice 8-bit hashtag ethical vinyl 90's disrupt next level post-ironic butcher paleo.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div id="section">
+    <h2 class="section-title">How It Works</h2>
+  </div>
+</section>
+
+<section id="featured">
+  <div id="section">
+    <h2 class="section-title">Featured Projects</h2>
+    <ul>
+      <li><img src="http://placehold.it/300"></li>
+      <li><img src="http://placehold.it/300"></li>
+      <li><img src="http://placehold.it/300"></li>
+    </ul>
+    <%= link_to("See All...", projects_path) %>
+  </div>
+</section>
+
+<footer>
+  <ul>
+    <li>About</li>
+    <li>How It Works</li>
+    <li>Featured Projects</li>
+    <li>Contact</li>
+  </ul>
+</footer>

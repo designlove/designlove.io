@@ -1,2 +1,8 @@
-<h1>CurrentUser#show</h1>
-<p>Find me in app/views/current_user/show.html.erb</p>
+<% if current_user.projects %>
+  <% current_user.projects.each do | project | %>
+    <h1><%= link_to project.project_name, project_path(project) %></h1>
+    <p><%= link_to 'Add New Project', new_project_path %></p>
+  <% end %>
+<% else %>
+  <%= link_to 'Add Project', new_project_path %>
+<% end %>
