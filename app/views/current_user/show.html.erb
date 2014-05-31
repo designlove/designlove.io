@@ -1,8 +1,9 @@
 <% if current_user.projects %>
   <% current_user.projects.each do | project | %>
     <h1><%= link_to project.project_name, project_path(project) %></h1>
-    <p><%= link_to 'Add New Project', new_project_path %></p>
   <% end %>
 <% else %>
-  <%= link_to 'Add Project', new_project_path %>
+  You don't have any projects to display
 <% end %>
+
+<p><%= link_to 'Add New Project', new_project_path %></p>
