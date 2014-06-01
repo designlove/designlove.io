@@ -1,49 +1,8 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>DesignLove.io</title>
-    <%= stylesheet_link_tag    'application' %>
-    <%= javascript_include_tag 'application' %>
-    <%= typekit_include_tag 'gch4mju' %>
-    <%= csrf_meta_tags %>
-  </head>
+<html lang="en">
+  <%= render 'layouts/head' %>
   <body>
-    <header class="black">
-      <nav class="container tk-museo-sans-rounded">
-        <%= link_to image_tag("designlove-logo.png"), root_path %>
-        <ul class="navbar-right">
-          <li><%= link_to "About", root_path(anchor: "about") %></li>
-          <li><%= link_to "How It Works", root_path(anchor: "how") %></li>
-          <li><%= link_to "Featured Projects", root_path(anchor: "featured") %></li>
-          <% if user_signed_in? %>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=current_user.email %>
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "My Projects", user_path %>
-                <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-                <li class="divider"></li>
-                <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-              </ul>
-            </li>
-          <% else %>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Log in", new_user_session_path %></li>
-                <li><%= link_to "Sign up", new_user_registration_path %></li>
-              </ul>
-            </li>
-          <% end %>
-        </ul>
-      </nav>
-    </header>
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-info") %>
-    <% end %>
+    <%= render 'layouts/navheader' %>
     <%= yield %>
   </body>
 </html>
