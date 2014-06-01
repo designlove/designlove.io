@@ -1,5 +1,5 @@
 <div class="masthead black" id="home">
-  <div class="container center">
+  <div class="container-fluid center">
     <h1 class="tagline tk-museo-sans-rounded">Every Project Could Use A Little Design Love</h1>
     <div class="call-to-action">
       <h2 class="tk-museo-sans-rounded">Sign Up to Get Design Love</h2>
@@ -25,19 +25,19 @@
 
 <section id="how">
   <div class="section black">
-    <h2 class="section-title">How It Works</h2>
+    <h2 class="section-header tk-museo-sans-rounded">How It Works</h2>
   </div>
 </section>
 
 <section id="featured">
-  <div id="section">
-    <h2 class="section-title">Featured Projects</h2>
-    <ul>
+  <div id="container section">
+    <h2 class="section-header tk-museo-sans-rounded">Featured Projects</h2>
+    <ul class="projects">
       <li><img src="http://placehold.it/300"></li>
       <li><img src="http://placehold.it/300"></li>
       <li><img src="http://placehold.it/300"></li>
     </ul>
-    <%= link_to("See All...", projects_path) %>
+    <p><%= link_to("See All...", projects_path) %></p>
   </div>
 </section>
 

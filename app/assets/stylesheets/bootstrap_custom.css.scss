@@ -8,6 +8,10 @@ body{
   padding: 0;
 }
 
+// ***************
+// Utility Classes
+// ***************
+
 .center{
   text-align: center;
 }
@@ -27,10 +31,9 @@ body{
   font-size: 36px;
 }
 
-.masthead{
-  width: 100%;
-  height: 350px;
-}
+// **********
+// Navigation
+// **********
 
 nav ul{
   list-style-type: none;
@@ -45,7 +48,7 @@ nav ul li {
 
 nav ul li:last-child {
   padding-right: 0px;
-  color: #292929;
+  color: #ffffff;
 }
 
 nav ul li a{
@@ -60,9 +63,23 @@ nav ul li a{
      -moz-transition: color .2s ease-in-out;
           transition: color .2s ease-in-out;
 }
-nav ul li a:link{color: #292929;  }
+nav ul li a:link{color: #ffffff;}
+nav ul li a:active{color: #ffffff; text-decoration: none;}
 nav ul li a:visited{color: #ffffff; text-decoration: none;}
 nav ul li a:hover{color: #FB0219; text-decoration: none;}
+
+ul.dropdown-menu li a:link{
+  color: #000;
+}
+
+// ********
+// Masthead
+// ********
+
+.masthead{
+  width: 100%;
+  height: 350px;
+}
 
 h1.tagline{
   font-size: 48px;
@@ -96,6 +113,10 @@ a.btn-get-started:hover{
   text-decoration: none;
 }
 
+//
+// About Section
+//
+
 #about{
   color: #292929;
 }
@@ -104,6 +125,33 @@ a.btn-get-started:hover{
   margin-top: 30px;
 }
 
+// ********************
+// How it Works Section
+// ********************
+
 #how{
   color: #fff;
+}
+
+// *****************
+// Featured Projects
+// *****************
+
+ul.projects{
+  list-style-type: none;
+  margin-top: 25px;
+}
+
+ul.projects li {
+  display: block;
+  float: left;
+  padding-right: 30px;
+}
+
+// *****************
+// Devise Forms
+// *****************
+
+.registration{
+  padding-top: 40px;
 }
